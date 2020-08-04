@@ -14,6 +14,7 @@ extension ViewController: MTKViewDelegate {
     func draw(in view: MTKView) {
         let vertices = model.getVertices()
         renderer.buildVertexBuffer(array: vertices)
+        renderer.setCamera(camera: model.getCamera())
         renderer.render(view: view)
     }
 }
